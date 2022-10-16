@@ -1,0 +1,64 @@
+void main() {
+   var usuario1 = User();
+   usuario1.nombre = "Alex";
+   usuario1.edad = 50;
+   usuario1.reporte();
+   var estudiante1 = Estudiante();
+   estudiante1.carrera = "Ingeneria en computacion inteligente";
+   estudiante1.noCuenta = "20185466";
+   estudiante1.semestre = "3ero";
+   estudiante1.reporte();
+}
+
+class User {
+  //propiedades  
+  String? nombre;
+  int? edad;  
+  //metodos
+  void reporte(){
+    print(nombre);
+    print(edad);
+  }
+}
+
+class Estudiante{
+    String? noCuenta;
+    String? carrera;
+    String? semestre;
+  void reporte(){
+    print("Carrera: $carrera");
+    print("No de Cuenta: $noCuenta") ;
+    print("semestre: $semestre");
+  }  
+}
+
+
+El simbolo _ sirve para encapsular
+
+void main(List<String> args){  
+  User usuario1 = User();
+  usuario1.nombre = "Alex";
+  usuario1.edad = 15; 
+  usuario1.reporte(); 
+}
+
+class User {
+  String? _nombre;
+  int? _edad;
+
+  void set nombre(nombre){
+    _nombre = nombre;
+ }
+  void set edad(int edad){
+    _edad = edad;
+  }
+
+  String get nombre {
+    return _nombre!; 
+    }
+
+  void reporte(){
+  print(_nombre); 
+  print(_edad); 
+ }
+}
